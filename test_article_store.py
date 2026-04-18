@@ -5,6 +5,6 @@ def test_login_page_title(page: Page):
     page.locator('xpath=//a[contains(@class, "login")]').click()
     expect(page).to_have_title('Login')
     page.locator('//*[@id="username"]').fill('dssdfer')
-    page.locator('//*[@id="password"]').fill('we43324rrfsd')
+    page.locator('//*[@id="password"]').fill('we4332114rrfsd')
     page.keyboard.press('Enter')
     expect(page.locator("//div[contains(@class, 'login-error')]")).to_have_text("Invalid login or password.")
