@@ -6,11 +6,11 @@ MY_URL = 'http://144.31.139.115:5000/'
 
 
 def test_login_page_title(page: Page):
-    # Генерируем случайные данные
+    # Генерируем случайные данные.
     username = fake.user_name()
     password = fake.password()
 
-    # Переходим на главную страницу
+    # Переходим на главную страницу.
     page.goto(MY_URL)
 
     # Нажимаем на ссылку для перехода к форме входа
@@ -34,7 +34,7 @@ def test_login_page_title(page: Page):
     error_xpath = '//div[contains(@data-testid, "login-error-inline") and normalize-space()]'
     error_locator = page.locator(error_xpath)
 
-    # Ждем, пока элемент станет видимым и в нем появится текст
+    # Ждем, пока элемент станет видимым и в нем появится текст.
     error_locator.wait_for(state='visible', timeout=10000)
 
     # Вычитываем актуальный текст ошибки
