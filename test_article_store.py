@@ -10,7 +10,7 @@ def test_login_page_title(page: Page):
     username = fake.user_name()
     password = fake.password()
 
-    # Переходим на страницу
+    # Переходим на главную страницу
     page.goto(MY_URL)
 
     # Нажимаем на ссылку для перехода к форме входа
