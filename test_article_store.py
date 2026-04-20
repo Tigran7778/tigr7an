@@ -6,7 +6,7 @@ MY_URL = 'http://144.31.139.115:5000/'
 
 
 def test_login_page_title(page: Page):
-    # Генерируем рандомные данные
+    # Генерируем случайные данные
     username = fake.user_name()
     password = fake.password()
 
